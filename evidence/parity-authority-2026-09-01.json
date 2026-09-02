@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Sanitized local authority descriptor for the PHP-to-Node parity implementation. This is not a live-production drift receipt.",
+  "portableSource": {
+    "repository": "optimized-multi-domain-shortener",
+    "commit": "bde65c03e01a373de5c7ce44828432057668ab63",
+    "capturedOn": "2026-08-30",
+    "sourceFileCount": 28,
+    "sourceManifestSha256": "f333021f8c4770288a0fab57d22f36272cce232b6b4c2daab8e3b8147873aea1",
+    "provenanceSha256": "f6cedb6b0ac1ddff69f0be09b133556200c7f060b1fde9dd621d8b9fc7ddf644",
+    "scope": "D1 URL6X control plane, D2 VIDX1X redirect surface, and D3 Plays9X redirect surface, including the 2026-08-30 api.php/app.js overlay"
+  },
+  "mutableOperationalOverlay": {
+    "recordedAt": "2026-09-01T07:42:00Z",
+    "freshBoundary": "2026-09-01T07:20:00Z",
+    "statusAtRecord": "D3 R4 Phase A collecting, 2 of 36; D2 accepted at 36 of 36",
+    "runbookSha256": "4c2bf4c6d4d314c9edfa3bd68f0d59e8e2f595717576c407108d8b974338bac9",
+    "d3LibSha256": "d6e4fc2fe8201a6c9a396bd4016b336e397955762b887b2883a803e5fd85c9c3",
+    "d3RedirectSha256": "7d2e46bfd4cc69f0a897679d61e5eeac5c3a0b935ad76464a08330e2b0b9e18f",
+    "warning": "This is a dated operational observation. Never hardcode 2/36 or infer later maturity from this descriptor; refresh live state before pilot or release."
+  },
+  "topologyContract": {
+    "controlPlaneDomainId": 1,
+    "fallbackCreateDomainId": 2,
+    "selectableCreateDomainIds": [2, 3],
+    "domains": [
+      {
+        "id": 1,
+        "hostname": "url6x.com",
+        "surface": "dashboard",
+        "active": true,
+        "allowCreate": false
+      },
+      {
+        "id": 2,
+        "hostname": "vidx1x.com",
+        "surface": "redirect",
+        "active": true,
+        "allowCreate": true
+      },
+      {
+        "id": 3,
+        "hostname": "plays9x.com",
+        "surface": "redirect",
+        "active": true,
+        "allowCreate": true,
+        "aliases": [],
+        "wwwConfigured": false
+      }
+    ]
+  },
+  "exclusions": [
+    "credentials, salts, origin-auth secrets, and private runtime paths",
+    "production application/server identities and rollback packages",
+    "current live hashes, current report maturity, and current cron state",
+    "uploads, user data, logs, sessions, and Redis values"
+  ]
+}

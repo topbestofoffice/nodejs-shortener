@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "key": "url6x",
+    "diversionCampaign": "url6x",
+    "reportTimezone": "Asia/Kolkata",
+    "canonicalHost": "url6x.local",
+    "aliases": ["www.url6x.local"],
+    "label": "URL6X",
+    "surface": "dashboard",
+    "active": true,
+    "allowCreate": false,
+    "publicBaseUrl": "http://url6x.local:3000",
+    "imageBaseUrl": "http://url6x.local:3000",
+    "emitLocalImageAlt": true
+  },
+  {
+    "id": 2,
+    "key": "vidx1x",
+    "diversionCampaign": "vidx1x",
+    "reportTimezone": "Asia/Kolkata",
+    "canonicalHost": "vidx1x.local",
+    "aliases": ["www.vidx1x.local"],
+    "label": "VIDX1X",
+    "surface": "redirect",
+    "active": true,
+    "allowCreate": true,
+    "publicBaseUrl": "http://vidx1x.local:3000",
+    "imageBaseUrl": "http://vidx1x.local:3000",
+    "creationFallback": true,
+    "compactNoImagePreview": true
+  },
+  {
+    "id": 3,
+    "key": "plays9x",
+    "diversionCampaign": "plays9x",
+    "reportTimezone": "Asia/Kolkata",
+    "canonicalHost": "plays9x.local",
+    "aliases": [],
+    "label": "Plays9X",
+    "surface": "redirect",
+    "active": true,
+    "allowCreate": true,
+    "publicBaseUrl": "http://plays9x.local:3000",
+    "imageBaseUrl": "http://plays9x.local:3000",
+    "acceptUnprovenDeliveredClaim": true,
+    "emitLocalImageAlt": true
+  }
+]

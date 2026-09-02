@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "contractId": "nodejs-shortener-mariadb-10.11-v1",
+  "description": "Required read-only compatibility shape for the Node shortener hot path, authentication, uploads and reporting.",
+  "runtimeVersionPattern": "^10\\.11\\.",
+  "requiredSqlModes": ["STRICT_TRANS_TABLES", "NO_ENGINE_SUBSTITUTION"],
+  "allowAdditionalTables": true,
+  "requiredTableEngines": {
+    "links": "InnoDB",
+    "uploaded_images": "InnoDB",
+    "image_job_ledger_v1": "InnoDB",
+    "users": "InnoDB",
+    "remember_tokens": "InnoDB",
+    "settings": "InnoDB",
+    "domain_settings": "InnoDB",
+    "geo_rules": "InnoDB",
+    "diversion_history_10m": "InnoDB"
+  },
+  "legacyBaseline": {
+    "file": "evidence/current-schema-sanitized.json",
+    "sha256": "4adca83885e1dddd4a6e174a47da6a1fc350134a993245e8f04c62f0682e173d"
+  },
+  "sources": [
+    {
+      "kind": "node-forward-schema",
+      "file": "database/001_image_job_ledger.sql",
+      "sha256": "a1806e3cf3cf64e6693ba9a72b1cea02f09c65a78c422b7226ba644d72c1a352",
+      "proves": "image_job_ledger_v1"
+    },
+    {
+      "kind": "node-forward-schema",
+      "file": "database/002_links_recent_activity_epochs.sql",
+      "sha256": "009def962b50c4f423e23daecb3c90cd7815e1ace8aa7a495b507cdc8c73a065",
+      "proves": "links.recent_activity_epochs"
+    },
+    {
+      "kind": "node-forward-schema",
+      "file": "database/003_runtime_schema_contract_marker.sql",
+      "sha256": "0c046a0b2c9c3a26c6b8602b597c6891c2027d38ff21ff1e9d6b5deccfaaf55d",
+      "proves": "runtime readiness schema-contract marker"
+    }
+  ],
+  "additions": {
+    "links": {
+      "columns": {
+        "recent_activity_epochs": ["longtext", true, "ascii_bin", null, ""]
+      }
+    },
+    "image_job_ledger_v1": {
+      "columns": {
+        "id": ["bigint(20) unsigned", false, null, null, "auto_increment"],
+        "job_id": ["char(32)", false, "ascii_bin", null, ""],
+        "request_key": ["char(64)", false, "ascii_bin", null, ""],
+        "payload_hash": ["char(64)", false, "ascii_bin", null, ""],
+        "domain_id": ["smallint(5) unsigned", false, null, null, ""],
+        "user_id": ["bigint(20) unsigned", false, null, null, ""],
+        "session_scope_hash": ["char(64)", false, "ascii_bin", null, ""],
+        "ownership_expires_at": ["datetime(6)", false, null, null, ""],
+        "input_storage_key": ["varchar(255)", false, "ascii_bin", null, ""],
+        "output_storage_key": ["varchar(255)", false, "ascii_bin", null, ""],
+        "state": ["enum('requested','queued','processing','output_ready','publishing','ready','failed','compensation_required','compensating','compensated','manual_review')", false, "utf8mb4_unicode_ci", "requested", ""],
+        "publication_state": ["enum('private','publishing','published','unknown','removed')", false, "utf8mb4_unicode_ci", "private", ""],
+        "compensation_state": ["enum('not_required','required','in_progress','complete')", false, "utf8mb4_unicode_ci", "not_required", ""],
+        "version": ["bigint(20) unsigned", false, null, "0", ""],
+        "attempt_count": ["smallint(5) unsigned", false, null, "0", ""],
+        "max_attempts": ["smallint(5) unsigned", false, null, "3", ""],
+        "compensation_attempt_count": ["smallint(5) unsigned", false, null, "0", ""],
+        "max_compensation_attempts": ["smallint(5) unsigned", false, null, "5", ""],
+        "next_attempt_at": ["datetime(6)", true, null, null, ""],
+        "first_attempt_at": ["datetime(6)", true, null, null, ""],
+        "last_attempt_at": ["datetime(6)", true, null, null, ""],
+        "last_compensation_attempt_at": ["datetime(6)", true, null, null, ""],
+        "lease_owner": ["varchar(128)", true, "ascii_bin", null, ""],
+        "lease_token": ["char(32)", true, "ascii_bin", null, ""],
+        "lease_acquired_at": ["datetime(6)", true, null, null, ""],
+        "lease_expires_at": ["datetime(6)", true, null, null, ""],
+        "output_ready_at": ["datetime(6)", true, null, null, ""],
+        "result_source_width": ["int(10) unsigned", true, null, null, ""],
+        "result_source_height": ["int(10) unsigned", true, null, null, ""],
+        "published_at": ["datetime(6)", true, null, null, ""],
+        "ready_at": ["datetime(6)", true, null, null, ""],
+        "failed_at": ["datetime(6)", true, null, null, ""],
+        "compensation_requested_at": ["datetime(6)", true, null, null, ""],
+        "compensated_at": ["datetime(6)", true, null, null, ""],
+        "last_error_code": ["varchar(64)", true, "ascii_bin", null, ""],
+        "last_error_fingerprint": ["char(64)", true, "ascii_bin", null, ""],
+        "created_at": ["datetime(6)", false, null, null, ""],
+        "updated_at": ["datetime(6)", false, null, null, ""]
+      },
+      "indexes": {
+        "PRIMARY": {"unique": true, "columns": ["id"]},
+        "uq_image_job_ledger_job": {"unique": true, "columns": ["job_id"]},
+        "uq_image_job_ledger_request": {"unique": true, "columns": ["request_key"]},
+        "uq_image_job_ledger_input": {"unique": true, "columns": ["input_storage_key"]},
+        "uq_image_job_ledger_output": {"unique": true, "columns": ["output_storage_key"]},
+        "ix_image_job_dispatch": {"unique": false, "columns": ["state", "next_attempt_at", "id"]},
+        "ix_image_job_expired_lease": {"unique": false, "columns": ["state", "lease_expires_at", "id"]},
+        "ix_image_job_compensation": {"unique": false, "columns": ["compensation_state", "next_attempt_at", "id"]},
+        "ix_image_job_owner_history": {"unique": false, "columns": ["user_id", "domain_id", "created_at", "id"]},
+        "ix_image_job_terminal_retention": {"unique": false, "columns": ["state", "updated_at", "id"]}
+      }
+    }
+  },
+  "foreignKeys": [
+    {"name": "fk_country_10m_domain", "table": "country_report_10m", "columns": ["domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "RESTRICT", "updateRule": "RESTRICT"},
+    {"name": "fk_country_daily_domain", "table": "country_report_daily", "columns": ["domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "RESTRICT", "updateRule": "RESTRICT"},
+    {"name": "fk_country_state_domain", "table": "country_report_state", "columns": ["domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "RESTRICT", "updateRule": "RESTRICT"},
+    {"name": "fk_delivered_country_state_domain", "table": "delivered_country_10m_state", "columns": ["domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "RESTRICT", "updateRule": "RESTRICT"},
+    {"name": "fk_diversion_history_domain", "table": "diversion_history_10m", "columns": ["domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "RESTRICT", "updateRule": "RESTRICT"},
+    {"name": "fk_domain_settings_domain", "table": "domain_settings", "columns": ["domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "CASCADE", "updateRule": "RESTRICT"},
+    {"name": "fk_geo_rules_domain", "table": "geo_rules", "columns": ["domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "CASCADE", "updateRule": "RESTRICT"},
+    {"name": "fk_links_domain", "table": "links", "columns": ["domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "RESTRICT", "updateRule": "RESTRICT"},
+    {"name": "fk_links_user", "table": "links", "columns": ["user_id"], "referencedTable": "users", "referencedColumns": ["id"], "deleteRule": "CASCADE", "updateRule": "RESTRICT"},
+    {"name": "fk_remember_user", "table": "remember_tokens", "columns": ["user_id"], "referencedTable": "users", "referencedColumns": ["id"], "deleteRule": "CASCADE", "updateRule": "RESTRICT"},
+    {"name": "fk_uploaded_images_user", "table": "uploaded_images", "columns": ["user_id"], "referencedTable": "users", "referencedColumns": ["id"], "deleteRule": "RESTRICT", "updateRule": "RESTRICT"},
+    {"name": "fk_users_default_domain", "table": "users", "columns": ["default_domain_id"], "referencedTable": "domains", "referencedColumns": ["id"], "deleteRule": "SET NULL", "updateRule": "RESTRICT"}
+  ],
+  "knownBoundaries": [
+    "image_job_ledger_v1 has no foreign keys in its Node-owned 001 source; user/domain lifecycle reconciliation remains application-level and is not claimed by this gate.",
+    "The MariaDB session time_zone is captured but is not a schema blocker: Node supplies UTC timestamps explicitly and mysql2 decodes DATETIME values with timezone Z. This gate does not validate SQL that depends on database-session local time."
+  ]
+}

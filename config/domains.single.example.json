@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "key": "shortener",
+    "diversionCampaign": "shortener",
+    "reportTimezone": "Asia/Kolkata",
+    "canonicalHost": "short.example.com",
+    "aliases": ["www.short.example.com"],
+    "label": "Shortener",
+    "surface": "dashboard",
+    "active": true,
+    "allowCreate": true,
+    "publicBaseUrl": "https://short.example.com",
+    "imageBaseUrl": "https://short.example.com"
+  }
+]

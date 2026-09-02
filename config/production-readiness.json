@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 2,
+  "project": "nodejs-shortener",
+  "receiptPolicy": {
+    "maxAgeHours": 168,
+    "futureSkewMinutes": 5
+  },
+  "deployments": {
+    "pilot": null,
+    "release": null
+  },
+  "gates": [
+    {
+      "id": "exact-schema-db-redis-parity",
+      "requiredBefore": "pilot",
+      "status": "pending",
+      "description": "Run Node against a disposable clone of the exact MariaDB schema and Redis key/cache contract, then reconcile rows, counters, finite-pool saturation, acquisition deadlines and failure modes.",
+      "evidence": []
+    },
+    {
+      "id": "redirect-shadow-parity",
+      "requiredBefore": "pilot",
+      "status": "pending",
+      "description": "Compare PHP and Node redirect decisions and bounded audit output for the same sanitized traffic corpus, including Meta, datacenter, replay, country, diversion and cookies.",
+      "evidence": []
+    },
+    {
+      "id": "delivered-country-and-reporting-parity",
+      "requiredBefore": "pilot",
+      "status": "pending",
+      "description": "Implement and reconcile D2 delivered-country observation, publisher, history and truthful report semantics.",
+      "evidence": []
+    },
+    {
+      "id": "operator-feature-parity",
+      "requiredBefore": "pilot",
+      "status": "pending",
+      "description": "Complete registration, public pages, dashboard, Admin, history, shield statistics, single-domain full flow and configurable shared-account policy.",
+      "evidence": []
+    },
+    {
+      "id": "image-crash-recovery",
+      "requiredBefore": "pilot",
+      "status": "pending",
+      "description": "Prove atomic concurrent admission, upload/BullMQ reconciliation, and receipt-backed ownership/orphan retention across Redis/web/worker crashes, retries, restarts, disk-full and backup/restore.",
+      "evidence": []
+    },
+    {
+      "id": "cloudways-proxy-and-storage-proof",
+      "requiredBefore": "release",
+      "status": "pending",
+      "description": "Verify the exact Node/Sharp build, static exclusions, Host/protocol/client IP/country trust, spoof handling, body limits, buffering, timeouts, persistent paths, Redis connection count, PM2 reboot recovery and log rotation on the isolated pilot.",
+      "evidence": []
+    },
+    {
+      "id": "country-fallback-policy",
+      "requiredBefore": "pilot",
+      "status": "pending",
+      "description": "Replace or explicitly approve the inherited plaintext ip-api fallback with bounded privacy, availability and rate-limit behavior.",
+      "evidence": []
+    },
+    {
+      "id": "all-source-runtime-tests",
+      "requiredBefore": "pilot",
+      "status": "pending",
+      "description": "Pass the all-source coverage thresholds and targeted tests for bootstrap, MariaDB, Redis, BullMQ and worker failure paths.",
+      "evidence": []
+    },
+    {
+      "id": "same-size-performance-proof",
+      "requiredBefore": "release",
+      "status": "pending",
+      "description": "Benchmark feature-equivalent PHP and Node on the same 1-vCPU/2-GB shape and confirm acceptable CPU, RAM, latency and throughput.",
+      "evidence": []
+    },
+    {
+      "id": "one-writer-cutover-and-rollback",
+      "requiredBefore": "release",
+      "status": "pending",
+      "description": "Prove every accepted pilot-to-release runtime configuration difference, then approve the one-writer cutover, DNS rollback, database compatibility and exact acceptance checklist.",
+      "evidence": []
+    },
+    {
+      "id": "owner-pilot-deployment-authorization",
+      "requiredBefore": "pilot",
+      "status": "pending",
+      "description": "Record explicit owner authorization for the exact isolated pilot target after all technical pilot-candidate gates pass.",
+      "evidence": []
+    },
+    {
+      "id": "owner-production-deployment-authorization",
+      "requiredBefore": "release",
+      "status": "pending",
+      "description": "Record separate explicit owner authorization for the exact production cutover target.",
+      "evidence": []
+    }
+  ]
+}

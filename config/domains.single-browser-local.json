@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "key": "shortener",
+    "diversionCampaign": "shortener",
+    "reportTimezone": "Asia/Kolkata",
+    "canonicalHost": "127.0.0.1",
+    "aliases": [],
+    "label": "Single Shortener Local",
+    "surface": "dashboard",
+    "active": true,
+    "allowCreate": true,
+    "publicBaseUrl": "http://127.0.0.1:3000",
+    "imageBaseUrl": "http://127.0.0.1:3000"
+  }
+]

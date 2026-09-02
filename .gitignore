@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+.npmrc
+.eslintcache
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+config/domains.local.json
+.local-evidence/
+/evidence/readiness/
+private/
+public/uploads/
+*.log
+.DS_Store

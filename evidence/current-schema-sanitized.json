@@ -1,0 +1,2087 @@
+{
+  "_meta": {
+    "captured_at_utc": "2026-08-23T10:30:00Z",
+    "source": "read-only Cloudways PHP information_schema query",
+    "secrets_included": false,
+    "private_setting_values_included": false
+  },
+  "runtime": {
+    "version": "10.11.18-MariaDB-deb12-log",
+    "sql_mode": "STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION",
+    "time_zone": "Asia/Kolkata",
+    "max_connections": 29538
+  },
+  "domains": [
+    {
+      "id": 1,
+      "domain_key": "linksx6x",
+      "hostname": "url6x.com",
+      "label": "url6x.com",
+      "active": 1,
+      "allow_create": 0,
+      "role": "dashboard",
+      "report_timezone": "Asia/Kolkata",
+      "diversion_campaign": "linksx6x"
+    },
+    {
+      "id": 2,
+      "domain_key": "vidx1x",
+      "hostname": "vidx1x.com",
+      "label": "VIDX1X",
+      "active": 1,
+      "allow_create": 1,
+      "role": "redirect",
+      "report_timezone": "Asia/Kolkata",
+      "diversion_campaign": "vidx1x"
+    }
+  ],
+  "columns": [
+    {
+      "TABLE_NAME": "auth_throttle",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "auth_throttle",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "ip_hash",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "auth_throttle",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "action",
+      "COLUMN_TYPE": "varchar(16)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "auth_throttle",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "link_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "user_id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "code",
+      "COLUMN_TYPE": "varchar(32)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "ip_hash",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "country",
+      "COLUMN_TYPE": "char(2)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 9,
+      "COLUMN_NAME": "referer",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 10,
+      "COLUMN_NAME": "diverted",
+      "COLUMN_TYPE": "tinyint(3) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 11,
+      "COLUMN_NAME": "filter_reason",
+      "COLUMN_TYPE": "varchar(16)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "ORDINAL_POSITION": 12,
+      "COLUMN_NAME": "shadow_reason",
+      "COLUMN_TYPE": "varchar(16)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "bucket_start",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "country",
+      "COLUMN_TYPE": "char(2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "delivered",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "diverted",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "filtered_meta",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "filtered_bots",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "filtered_other",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "ORDINAL_POSITION": 9,
+      "COLUMN_NAME": "row_total",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "summary_date",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "country",
+      "COLUMN_TYPE": "char(2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "delivered",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "diverted",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "filtered_meta",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "filtered_bots",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "filtered_other",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "ORDINAL_POSITION": 9,
+      "COLUMN_NAME": "row_total",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "period_type",
+      "COLUMN_TYPE": "char(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "period_start",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "complete",
+      "COLUMN_TYPE": "tinyint(1) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "source_parts",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "source_rows",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "source_hash",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "result_hash",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "ORDINAL_POSITION": 9,
+      "COLUMN_NAME": "completed_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "bucket_start_utc",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('complete','complete_zero','incomplete')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb3_general_ci"
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "delivered_total",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "provenance",
+      "COLUMN_TYPE": "enum('redis_nonempty','verified_zero','health_incomplete')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb3_general_ci"
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "source_sha256",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "redis_run_id_sha256",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "reason_code",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "ORDINAL_POSITION": 9,
+      "COLUMN_NAME": "recorded_at_utc",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "bucket_start_utc",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "country",
+      "COLUMN_TYPE": "char(2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "diverted",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "filtered_meta",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "filtered_bots",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "filtered_other",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "delivered",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "domain_key",
+      "COLUMN_TYPE": "varchar(32)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "hostname",
+      "COLUMN_TYPE": "varchar(253)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "label",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "active",
+      "COLUMN_TYPE": "tinyint(1) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "allow_create",
+      "COLUMN_TYPE": "tinyint(1) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "role",
+      "COLUMN_TYPE": "varchar(16)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "report_timezone",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 9,
+      "COLUMN_NAME": "analytics_site_key",
+      "COLUMN_TYPE": "varchar(32)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 10,
+      "COLUMN_NAME": "diversion_campaign",
+      "COLUMN_TYPE": "varchar(32)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "ORDINAL_POSITION": 11,
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "domain_settings",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "domain_settings",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "skey",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "domain_settings",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "svalue",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "geo_rules",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "geo_rules",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "country_code",
+      "COLUMN_TYPE": "char(2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "geo_rules",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "percent",
+      "COLUMN_TYPE": "tinyint(3) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "ip_geo_cache",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "ip_hash",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "ip_geo_cache",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "country",
+      "COLUMN_TYPE": "char(2)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "ip_geo_cache",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "fetched_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "code",
+      "COLUMN_TYPE": "varchar(32)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "user_id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "destination",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "title",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "description",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "image",
+      "COLUMN_TYPE": "varchar(512)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 9,
+      "COLUMN_NAME": "clicks",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 10,
+      "COLUMN_NAME": "diverted_clicks",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 11,
+      "COLUMN_NAME": "filtered_meta_clicks",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 12,
+      "COLUMN_NAME": "filtered_bot_clicks",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 13,
+      "COLUMN_NAME": "filtered_other_clicks",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 14,
+      "COLUMN_NAME": "today_clicks",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 15,
+      "COLUMN_NAME": "today_click_date",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 16,
+      "COLUMN_NAME": "last_activity_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 17,
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 18,
+      "COLUMN_NAME": "filtered_d0",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 19,
+      "COLUMN_NAME": "filtered_c0",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 20,
+      "COLUMN_NAME": "filtered_d1",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 21,
+      "COLUMN_NAME": "filtered_c1",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 22,
+      "COLUMN_NAME": "filtered_d2",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 23,
+      "COLUMN_NAME": "filtered_c2",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 24,
+      "COLUMN_NAME": "filtered_d3",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 25,
+      "COLUMN_NAME": "filtered_c3",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 26,
+      "COLUMN_NAME": "filtered_d4",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 27,
+      "COLUMN_NAME": "filtered_c4",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 28,
+      "COLUMN_NAME": "filtered_d5",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 29,
+      "COLUMN_NAME": "filtered_c5",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 30,
+      "COLUMN_NAME": "filtered_d6",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "links",
+      "ORDINAL_POSITION": 31,
+      "COLUMN_NAME": "filtered_c6",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "link_activity_archive",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "link_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "link_activity_archive",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "last_activity_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "user_id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "selector",
+      "COLUMN_TYPE": "char(24)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "validator_hash",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "expires_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "settings",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "skey",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "settings",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "svalue",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "path",
+      "COLUMN_TYPE": "varchar(128)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "user_id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "session_scope_hash",
+      "COLUMN_TYPE": "binary(32)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "state",
+      "COLUMN_TYPE": "tinyint(3) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "ORDINAL_POSITION": 7,
+      "COLUMN_NAME": "expires_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "ORDINAL_POSITION": 8,
+      "COLUMN_NAME": "attached_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "users",
+      "ORDINAL_POSITION": 1,
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "users",
+      "ORDINAL_POSITION": 2,
+      "COLUMN_NAME": "username",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "ascii_bin"
+    },
+    {
+      "TABLE_NAME": "users",
+      "ORDINAL_POSITION": 3,
+      "COLUMN_NAME": "password_hash",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "users",
+      "ORDINAL_POSITION": 4,
+      "COLUMN_NAME": "role",
+      "COLUMN_TYPE": "varchar(16)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "'user'",
+      "EXTRA": "",
+      "COLLATION_NAME": "utf8mb4_general_ci"
+    },
+    {
+      "TABLE_NAME": "users",
+      "ORDINAL_POSITION": 5,
+      "COLUMN_NAME": "default_domain_id",
+      "COLUMN_TYPE": "smallint(5) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    },
+    {
+      "TABLE_NAME": "users",
+      "ORDINAL_POSITION": 6,
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLLATION_NAME": null
+    }
+  ],
+  "indexes": [
+    {
+      "TABLE_NAME": "auth_throttle",
+      "INDEX_NAME": "idx_throttle_lookup",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "ip_hash",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "auth_throttle",
+      "INDEX_NAME": "idx_throttle_lookup",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "action",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "auth_throttle",
+      "INDEX_NAME": "idx_throttle_lookup",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "created_at",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "auth_throttle",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_created",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "created_at",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_domain_created",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_domain_created",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "created_at",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_link_iphash",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "link_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_link_iphash",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "ip_hash",
+      "SUB_PART": 16,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_user_div_filter_created",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "user_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_user_div_filter_created",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "diverted",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_user_div_filter_created",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "filter_reason",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "idx_clicks_user_div_filter_created",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 4,
+      "COLUMN_NAME": "created_at",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "clicks",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "INDEX_NAME": "idx_country_report_10m_country",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "INDEX_NAME": "idx_country_report_10m_country",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "country",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "INDEX_NAME": "idx_country_report_10m_country",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "bucket_start",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "bucket_start",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_10m",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "country",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "INDEX_NAME": "idx_country_report_daily_country",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "INDEX_NAME": "idx_country_report_daily_country",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "country",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "INDEX_NAME": "idx_country_report_daily_country",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "summary_date",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "summary_date",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_daily",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "country",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "period_type",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "country_report_state",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "period_start",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "delivered_country_10m_state",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "bucket_start_utc",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "bucket_start_utc",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "diversion_history_10m",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "country",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "INDEX_NAME": "uq_domains_hostname",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "hostname",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "domains",
+      "INDEX_NAME": "uq_domains_key",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_key",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "domain_settings",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "domain_settings",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "skey",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "geo_rules",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "geo_rules",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "country_code",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "ip_geo_cache",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "ip_hash",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "links",
+      "INDEX_NAME": "idx_links_image",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "image",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "links",
+      "INDEX_NAME": "idx_links_user",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "user_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "links",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "links",
+      "INDEX_NAME": "uq_links_domain_code",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "links",
+      "INDEX_NAME": "uq_links_domain_code",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "code",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "link_activity_archive",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "link_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "INDEX_NAME": "idx_remember_expires",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "expires_at",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "INDEX_NAME": "idx_remember_user",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "user_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "remember_tokens",
+      "INDEX_NAME": "selector",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "selector",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "settings",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "skey",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "INDEX_NAME": "idx_uploaded_images_expiry",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "state",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "INDEX_NAME": "idx_uploaded_images_expiry",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "expires_at",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "INDEX_NAME": "idx_uploaded_images_owner",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "user_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "INDEX_NAME": "idx_uploaded_images_owner",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 2,
+      "COLUMN_NAME": "session_scope_hash",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "INDEX_NAME": "idx_uploaded_images_owner",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 3,
+      "COLUMN_NAME": "state",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "uploaded_images",
+      "INDEX_NAME": "uq_uploaded_images_path",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "path",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "users",
+      "INDEX_NAME": "idx_users_default_domain",
+      "NON_UNIQUE": 1,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "default_domain_id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "users",
+      "INDEX_NAME": "PRIMARY",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "id",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    },
+    {
+      "TABLE_NAME": "users",
+      "INDEX_NAME": "username",
+      "NON_UNIQUE": 0,
+      "SEQ_IN_INDEX": 1,
+      "COLUMN_NAME": "username",
+      "SUB_PART": null,
+      "COLLATION": "A",
+      "INDEX_TYPE": "BTREE"
+    }
+  ],
+  "domain_setting_shapes": [
+    {
+      "domain_id": 1,
+      "skey": "skim_default_percent",
+      "value_length": 1,
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "policy_active": null,
+      "policy_scope": null,
+      "policy_country_count": null
+    },
+    {
+      "domain_id": 1,
+      "skey": "skim_destination_url",
+      "value_length": 32,
+      "value_sha256": "db205ae0446e99bddc9dd85fba2b0e3ab26300b84f36e6c60d2f4141c2d5f02d",
+      "policy_active": null,
+      "policy_scope": null,
+      "policy_country_count": null
+    },
+    {
+      "domain_id": 1,
+      "skey": "skim_enabled",
+      "value_length": 1,
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "policy_active": null,
+      "policy_scope": null,
+      "policy_country_count": null
+    },
+    {
+      "domain_id": 2,
+      "skey": "skim_default_percent",
+      "value_length": 1,
+      "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "policy_active": null,
+      "policy_scope": null,
+      "policy_country_count": null
+    },
+    {
+      "domain_id": 2,
+      "skey": "skim_destination_url",
+      "value_length": 34,
+      "value_sha256": "e31dad206b39da8ac114c9906930c93a871ed346f9dc6f92d822b7a29b20ebfd",
+      "policy_active": null,
+      "policy_scope": null,
+      "policy_country_count": null
+    },
+    {
+      "domain_id": 2,
+      "skey": "skim_enabled",
+      "value_length": 1,
+      "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "policy_active": null,
+      "policy_scope": null,
+      "policy_country_count": null
+    },
+    {
+      "domain_id": 2,
+      "skey": "skim_quality_policy_v1",
+      "value_length": 93,
+      "value_sha256": "1bd0b4d29929d6e1abf3644784d2ad14dcc58f3147c5d2e62761e5bf1457b351",
+      "policy_active": "1",
+      "policy_scope": "selected",
+      "policy_country_count": 9
+    }
+  ]
+}

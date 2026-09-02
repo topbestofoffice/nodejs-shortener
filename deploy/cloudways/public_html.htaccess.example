@@ -1,0 +1,26 @@
+# Cloudways Flexible public_html proxy template.
+# Replace only the loopback-port placeholder after Support confirms that this
+# exact port belongs to this exact application.
+#
+# REQUIRED IN THE SUPPORT-MANAGED VHOST, NOT HERE:
+# - mod_proxy + mod_proxy_http + mod_rewrite enabled
+# - ProxyPreserveHost On
+# - trusted forwarding headers stripped/overwritten
+# - the private origin-auth header injected outside public_html
+# - measured request-body, buffering, and 90-second starting timeouts
+
+RewriteEngine On
+
+# Never let a misplaced repository/config file or executable upload become an
+# Apache-served static file. Cloudways' wider web-stack policy is still required.
+RewriteRule (?:^|/)\. - [F,END,NC]
+RewriteRule (?:^|/)[^/]*\.(?:env|ini|log|sql|bak|old|orig|save|tmp|swp|conf|config|key|pem|p12|pfx)(?:/|$) - [F,END,NC]
+RewriteRule ^uploads/.*\.(?:php[0-9s]?|phtml|phar)(?:/|$) - [F,END,NC]
+
+# Always leave uploads to the public web stack, including paths that do not yet
+# exist. This exclusion must remain before every proxy rule.
+RewriteRule ^uploads(?:/|$) - [END,NC]
+
+# Everything else, including manifest-bound UI assets, goes only to this
+# installation's loopback Node listener.
+RewriteRule ^(.*)$ http://127.0.0.1:__UNIQUE_LOOPBACK_PORT__/$1 [P,END]

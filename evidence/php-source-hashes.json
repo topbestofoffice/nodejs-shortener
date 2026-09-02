@@ -1,0 +1,27 @@
+{
+  "captured_at_utc": "2026-08-23T10:15:00Z",
+  "source": "read-only Cloudways application 6598284/tyqwxwuedy",
+  "schema": {
+    "file": "current-schema-sanitized.json",
+    "sha256": "4adca83885e1dddd4a6e174a47da6a1fc350134a993245e8f04c62f0682e173d"
+  },
+  "files": {
+    ".htaccess": "f1e2e1f9ce5b2c08e34e12b38428511c3b85e38854a6d34181caf15687acddf2",
+    "_link_card.php": "fac79e750e7b9c3e3224c27f376991f63c9f8d7d4f3be53a92e1b903ecfbc8b3",
+    "admin.php": "7e80862e71b19635ca7be53e4959339a79f9900c39f805f818e88b52128f81fe",
+    "api.php": "5b1ec939b06ff2274b19c9f6c16e0dd813fff77419585b8278aa55b4bc8172eb",
+    "assets/app.js": "4978d15fb213e0ec4a070d4b80a40fc6464226db1c96579aea5170eae4f63fc3",
+    "assets/dashboard.736bccfba8acfeee.css": "736bccfba8acfeeed2c7266abff3b4301a73a55f270a678ed9750ff789e9c1a7",
+    "cleanup_old_clicks.php": "c60b383d45ef8137d38db45c1cf80f69c9467139e8d021a6db9fca74256550cd",
+    "cleanup_stale_images.php": "64d6277e433b59a7abce44dbc7fddeada3d6d7b32eae10dbeb43ea132c29f332",
+    "country_report_rollup_lib.php": "cd422a407ad1fe81b72d745f886ff89ba886d6204099c644360578ee70ef1651",
+    "country_report_rollup.php": "c89e7b886fe79dd7922d2b3bcbeeec153c95eabcf77a37c2897e20120bc041c6",
+    "data/aws_ec2_ranges.php": "7f3b11337d7019794b998e8f89aa4c8ce410b0701e4618c71f2bb3c927a0ccce",
+    "data/datacenter_ranges.php": "302d970336b7391e34bfe31ce3dbcd9c88de7b3788b16c6153aea3a0fa05c5aa",
+    "home.php": "cb9257c9be064e570ca33be1230923674c05422b5afd49708b2b6d020b18a6cf",
+    "index.php": "4a6b40de084bf06f32bc4e82254633a4f5fd382344ca3a11bd2d3785a4627f6f",
+    "lib.php": "55397ab5666a12f84ed11a9243ec1a5def7f8d3a18af5152895cb4d3a9799485",
+    "redirect.php": "1e5b504030ec816c2542483dea15b8d3836ce88848af4fe37fe4cf89d2302567",
+    "upload.php": "3c1575924dcc5fa72e51112d05d5de55cd384085e0818430be18270efae4e9e9"
+  }
+}
